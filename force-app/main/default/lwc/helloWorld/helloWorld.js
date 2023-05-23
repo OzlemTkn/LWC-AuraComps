@@ -1,5 +1,12 @@
-import { LightningElement } from 'lwc';
-
+import { api, LightningElement } from 'lwc';
 export default class HelloWorld extends LightningElement {
-    //Properties and functions
+
+str = 'LWC';
+@api subject;
+@api Greeting;
+clickedButtonLabel;
+
+handleClick(event) {
+    this.clickedButtonLabel = event.target.label;
+}
 }

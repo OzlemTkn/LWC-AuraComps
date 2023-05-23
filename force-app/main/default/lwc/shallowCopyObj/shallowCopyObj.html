@@ -1,0 +1,21 @@
+<template>
+<lightning-card title="Shallow Copy Exp">
+<lightning-layout>
+    <lightning-layout-item padding="around-small">
+    <!-- 1.ornek  -->
+        <lightning-button label="Change Obj" onclick={handleChanging}> </lightning-button>
+
+        <lightning-button label="show Original Values" onclick={connectedCallback}> </lightning-button>
+
+    </lightning-layout-item>
+    <lightning-layout-item padding = "around-small">
+    <!-- 2.ornek: get ve set methodlarla kullanımı -->
+        <lightning-input type="text" value={person.name} onchange={handleNameChange}></lightning-input>
+        <lightning-input type="number" value={person.age} onchange={handleAgeChange}></lightning-input>
+            <div>Name:{person.name}</div>
+            <div>Age:{person.age}</div>
+
+    </lightning-layout-item>
+</lightning-layout>
+</lightning-card>
+</template>

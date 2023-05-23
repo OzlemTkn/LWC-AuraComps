@@ -1,11 +1,7 @@
 public with sharing class ContactController {
     @AuraEnabled(cacheable=true)
-    public static List<Contact> findContactByAccountId(String accountId) {      
-        return [
-            SELECT Id, FirstName,LastName,Email,Phone  
-            FROM Contact 
-            WHERE AccountId=:accountId 
-
-            LIMIT 10];
+    public static List<Contact> getContacts() {
+List<Contact> conList = [SELECT Id, LastName FROM Contact LIMIT 10];
+return conList;
     }
 }
